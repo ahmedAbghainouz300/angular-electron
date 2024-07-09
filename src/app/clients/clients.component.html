@@ -1,0 +1,46 @@
+<!-- clients.component.html -->
+<div class="clients-container">
+    <nav class="side-nav">
+      <button (click)="showClients()" [class.active]="isClientView">Clients</button>
+      <button (click)="showFournisseurs()" [class.active]="!isClientView">Fournisseurs</button>
+    </nav>
+  
+    <div class="clients-content">
+      <table class="clients-table" *ngIf="isClientView">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Telephone</th>
+            <th>Nature de tier</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let client of clients">
+            <td>{{ client.id }}</td>
+            <td>{{ client.name }}</td>
+            <td>{{ client.telephone }}</td>
+            <td>{{ client.natureDeTier }}</td>
+          </tr>
+        </tbody>
+      </table>
+  
+      <table class="clients-table" *ngIf="!isClientView">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Telephone</th>
+            <th>Nature de tier</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let fournisseur of fournisseurs">
+            <td>{{ fournisseur.id }}</td>
+            <td>{{ fournisseur.name }}</td>
+            <td>{{ fournisseur.telephone }}</td>
+            <td>{{ fournisseur.natureDeTier }}</td>
+          </tr>
+        </tbody>
+      </table>
+  

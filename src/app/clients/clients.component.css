@@ -1,0 +1,63 @@
+/* clients.component.css */
+
+/* Container for the entire clients page */
+.clients-container {
+    display: flex;
+  }
+  
+  /* Styling for the side navigation */
+  .side-nav {
+    width: 200px;
+    background-color: #2e7d32;
+    padding: 10px;
+  }
+  
+  .side-nav button {
+    display: block;
+    width: 100%;
+    background-color: #2e7d32;
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    margin-bottom: 10px;
+  }
+  
+  .side-nav button:hover {
+    background-color: #1b5e20;
+    color: #ffeb3b;
+  }
+  
+  .side-nav button.active {
+    background-color: #1b5e20;
+    color: #ffeb3b;
+    font-weight: bold;
+  }
+  
+  /* Styling for the clients content area */
+  .clients-content {
+    flex-grow: 1;
+    padding: 20px;
+  }
+  
+  /* Styling for the clients table */
+  .clients-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .clients-table th,
+  .clients-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .clients-table th {
+    background-color: #2e7d32;
+    color: white;
+  }
+  
